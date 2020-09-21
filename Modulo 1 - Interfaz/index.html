@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Usuario</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div class="container" id="app">
+        <header>
+            <div id="header-container">
+                <div class="header-hijos"> <img width="100px" height="100px" alt="fisi" src="https://fisiinteligenciaartificial.files.wordpress.com/2018/03/cropped-1200px-escudo_facultad_de_ingenierc3ada_de_sistemas_e_informc3a1tica_de_la_unmsm-svg.png?w=200"> </div>
+                <div class="header-hijos">
+                    <h1>Universidad Nacional Mayor de San Marcos</h1>
+                    <h3 class="pl-5">Facultad de Ingenieria de Sistemas e Informatica</h3>
+                </div>
+
+                <div class="header-hijos"><img width="100px" height="100px" alt="unmsm" src="https://lh3.googleusercontent.com/proxy/_imKnSz14fMuBGxciJ5HjSmiEZqFALOTl1TxT_ZQYn1a3NghWuNGDG7Y0S6xuJoq_WWWhVGWs2BnfaFY6Ms64uQ9PNyxApjhkqEJesbw8zt1eDNq"></div>
+            </div>
+
+
+            <h1 class="mb-5 mt-5">Modulo de Consulta Inventarios </h1>
+
+        </header>
+
+        <section>
+
+            <div class="row">
+                <div class="card col-md-5">
+                    <div class="card'header my-3 ">
+                        <h5>Ingrese Datos</h5>
+                    </div>
+                    <div class="card'body">
+                        <form action="http://localhost:3000" method="POST">
+                            <div class="form-group">
+                                <label> Codigo Cliente </label>
+                                <input type="text" name="codigocli" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label> Nombre </label>
+                                <input type="text" name="nombre" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label> RUC </label>
+                                <input id="cantidad" name="ruc" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label> Nombre Producto </label>
+                                <input id="cantidad" name="nombrepro" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label> Codigo </label>
+                                <input id="cantidad" name="codigo" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label> Cantidad </label>
+                                <input id="cantidad" name="cantidad" class="form-control">
+                            </div>
+
+                            <!-- <div class="form-group">
+                                <label> Precio </label>
+                                <input id="precio" type="number" class="form-control" disabled>
+                            </div> -->
+                    </div>
+                    <input type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Añadir</input>
+                    </form>
+
+                </div>
+            </div>
+
+        </section>
+
+        <footer></footer>
+    </div>
+
+    <!-- <script type="text/javascript">
+        function setPrecio(){
+            var index = document.getElementById('producto').value
+            cantidad = document.getElementById('precio').value
+            if(cantidad == 0 || cantidad == '' || cantidad == null) cantidad = 0
+            else cantidad = parseInt(cantidad)
+            // document.getElementById('precio').value = index * precio
+            document.getElementById('precio').value = <%=precio[0]%> * cantidad
+        }
+    </script> -->
+    <script src="index.js"></script>
+</body>
+
+</html>
